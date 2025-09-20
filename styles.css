@@ -1,0 +1,278 @@
+/* Minimal, clean styles */
+:root {
+  --bg: #0b0d12;
+  --ink: #e9eef5;
+  --mute: #9aa7b4;
+  --card: #141924;
+  --stroke: #232a36;
+  --accent: #7dd3fc;
+  --accent-ink: #062231;
+  --ok: #34d399;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(11, 13, 18, .7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--stroke);
+  z-index: 50
+}
+
+.nav .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0
+}
+
+.nav .links {
+  display: flex;
+  gap: 10px;
+  align-items: center
+}
+
+.nav .links a {
+  padding: 8px 12px;
+  border-radius: 10px
+}
+
+.nav .links a.cta {
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700
+}
+
+.dropdown {
+  position: relative
+}
+
+.dropbtn {
+  background: transparent;
+  border: 1px solid var(--stroke);
+  color: var(--ink);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  min-width: 200px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .35);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 12px;
+  border-bottom: 1px solid #1c2330
+}
+
+.dropdown:hover .dropdown-content {
+  display: block
+}
+
+.hero {
+  padding: 72px 0;
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(125, 211, 252, .08), transparent 60%)
+}
+
+.hero h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0 0 10px
+}
+
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image img {
+  max-width: 200px;  /* adjust size as needed */
+  height: auto;
+}
+
+
+.lead {
+  color: var(--mute);
+  max-width: 760px;
+  margin: 0 0 16px
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0 8px
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 16px;
+  border: 1px solid var(--stroke);
+  border-radius: 12px
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: transparent;
+  font-weight: 700
+}
+
+.btn.ghost:hover {
+  border-color: var(--accent)
+}
+
+.badges {
+  display: flex;
+  gap: 12px;
+  color: var(--mute);
+  margin-top: 10px;
+  flex-wrap: wrap
+}
+
+.section {
+  padding: 56px 0;
+  border-top: 1px solid var(--stroke)
+}
+
+.section.alt {
+  background: #0e121a
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: 16px
+}
+
+.pill-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none
+}
+
+.pill-list li {
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: #0f141e
+}
+
+.muted {
+  color: var(--mute)
+}
+
+.contact .quote-form {
+  margin-top: 12px
+}
+
+.quote-form label {
+  display: block;
+  font-size: 14px;
+  color: var(--mute);
+  margin-bottom: 8px
+}
+
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--stroke);
+  background: #0f141e;
+  color: var(--ink);
+  margin-top: 6px
+}
+
+.quote-form button {
+  margin-top: 10px
+}
+
+.privacy {
+  color: var(--mute);
+  font-size: 12px;
+  margin-top: 8px
+}
+
+.footer {
+  border-top: 1px solid var(--stroke);
+  padding: 16px 0;
+  color: var(--mute);
+  background: #0c1017
+}
+
+.logo {
+  filter: grayscale(1) brightness(1.2)
+}
+
+@media (max-width:900px) {
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr
+  }
+
+  .hero h1 {
+    font-size: 32px
+  }
+}

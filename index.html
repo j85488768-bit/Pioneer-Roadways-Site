@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pioneer Roadways • Flatbed</title>
+  <meta name="description" content="Pioneer Roadways — reliable flatbed & stepdeck hauling for construction and industrial freight. Direct, on-time, broker-free.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="container row">
+    <div class="brand">
+      <strong>Pioneer Roadways</strong>
+    </div>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#lanes">Lanes</a>
+      <a href="#equipment">Equipment</a>
+      <div class="dropdown">
+        <button class="dropbtn">More ▾</button>
+        <div class="dropdown-content">
+          <a href="#" title="Coming soon">Photography</a>
+          <a href="#" title="Coming soon">Classical Music</a>
+          <a href="#" title="Coming soon">Guitar Shops</a>
+          <a href="#" title="Coming soon">Books & Quotes</a>
+        </div>
+      </div>
+      <a href="#contact" class="cta">Request a Callback</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-flex">
+    <!-- Left side: text -->
+    <div class="hero-text">
+      <h1>Flatbed Hauling — <span class="accent">On Time.</span> Solutions.</h1>
+      <p class="lead">Direct, reliable deliveries for construction materials and industrial freight. Talk to the driver, not a broker.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="tel:+1-509-609-7117">📞 (509) 609-7117</a>
+        <a class="btn ghost" href="#contact">Send Email</a>
+      </div>
+    </div>
+
+    <!-- Right side: logo image -->
+    <div class="hero-image">
+      <img src="logo.png" alt="Pioneer Roadways logo">
+    </div>
+  </div>
+
+    <!-- 
+    <div class="badges">
+      <span>USDOT: <b>0000000</b></span>
+      <span>MC: <b>000000</b></span>
+      <span>Insured • 1M/100k</span>
+    </div>>
+  </div>
+   -->
+</section>
+
+<section id="services" class="section">
+  <div class="container grid-3">
+    <div class="card">
+      <h3>Flatbed Logistics</h3>
+      <p>Steel, lumber, panels, rebar, coils — handled with clean securement and attention to detail.</p>
+    </div>
+    <div class="card">
+      <h3>Machinery &amp; Equipment</h3>
+      <p>Loaders, generators, compressors, palletized freight. Tarping available on request.</p>
+    </div>
+    <div class="card">
+      <h3>Jobsite Ready</h3>
+      <p>Clear communication, flexible scheduling, and safety-first deliveries to keep projects moving.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="lanes" class="section alt">
+  <div class="container">
+    <h2>Primary Lanes</h2>
+    <ul class="pill-list">
+      <li>Oklahoma → Texas</li>
+      <li>Kansas → Missouri</li>
+      <li>Midwest ↔ OTR</li>
+    </ul>
+    <p class="muted">I mainly run the Midwest and Southern routes. I’ll run other lanes if the timing works.</p>
+  </div>
+</section>
+
+
+<section id="equipment" class="section">
+  <div class="container grid-3">
+    <div class="card">
+      <h3>48′ Flatbed (Spread Axle)</h3>
+      <p>Built for construction freight, lumber, steel, rebar, coils, machinery and palletized loads.</p>
+    </div>
+    <div class="card">
+      <h3>Securement</h3>
+      <p>Chains &amp; binders, straps, edge protectors, coil racks, dunnage. Tarping available on request.</p>
+    </div>
+    <div class="card">
+      <h3>Compliance</h3>
+      <p>ELD compliant, current medical card, up-to-date inspections &amp; insurance. Professional and jobsite-aware.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="section alt">
+  <div class="container contact">
+    <h2>Get in Touch</h2>
+    <p class="muted">
+      I’m a hands-on owner-operator. Call or email me directly and I’ll get back to you as soon as I can.<br>
+      📞 <a href="tel:+1-509-609-7117">(509) 609-7117</a> • ✉️ <a href="mailto:jacob@pioneerroadways.com">jacob@pioneerroadways.com</a>
+    </p>
+
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="quote-form" id="quoteForm">
+      <div class="grid-2">
+        <label>
+          Your Name*
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Company
+          <input type="text" name="company">
+        </label>
+        <label>
+          Email*
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone">
+        </label>
+      </div>
+      <label>
+        Message*
+        <textarea name="notes" rows="4" placeholder="Tell me about your load or just leave a callback request." required></textarea>
+      </label>
+
+      <!-- Anti-spam honeypot -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <!-- Optional: redirect after submit -->
+      <input type="hidden" name="_subject" value="New Message — Pioneer Roadways">
+      <input type="hidden" name="_format" value="plain">
+
+      <button class="btn primary" type="submit">Send Message</button>
+      <p class="privacy">I respect your time and privacy—your info stays between us.</p>
+    </form>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container row">
+    <div>© <span id="y"></span> Pioneer Roadways, LLC</div>
+    <!-- <div class="muted">MC/Authority on file • Fully insured</div> -->
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+<script>
+  console.log("%c For jess: unconditional, quiet, present. ", "color: #8B4513; font-size:14px; font-style:italic;");
+</script>
+
+</body>
+</html>
