@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photos • Pioneer Roadways</title>
+  <meta name="description" content="Photo gallery of Pioneer Roadways loads, equipment, and routes.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container row">
+    <div class="brand"><strong>Pioneer Roadways</strong></div>
+    <nav class="links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#lanes">Lanes</a>
+      <a href="index.html#equipment">Equipment</a>
+      <a href="photos.html" class="cta">Photos</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h1>On the Road</h1>
+    <p class="muted">A few recent shots from jobs and the highway. Click any photo to view larger.</p>
+
+    <div class="gallery grid">
+      <!-- Use your real filenames -->
+      <a href="SpaceEx.jpg" class="glink">
+        <img src="SpaceEx.jpg" alt="Delivery at SpaceX>
+      </a>
+      <a href="loadpic-1.jpg" class="glink">
+        <img src="loadpic-1.jpg" alt="The Flatbed pick-up">
+      </a>
+      <a href="loadpic-5.jpg" class="glink">
+        <img src="loadpic-5.jpg" alt="Steel coils">
+      </a>
+      <a href="loadpic-3.jpg" class="glink">
+        <img src="loadpic-3.jpg" alt="Unloading railroad ties from flatbed">
+      </a>
+      <a href="loadpic-4.jpg" class="glink">
+        <img src="loadpic-4.jpg" alt="Flatbed trailer loaded with utility trailers">
+      </a>
+      <a href="loadpic-2.jpg" class="glink">
+        <img src="loadpic-2.jpg" alt="Flatbed Traier with Containers">
+      </a>
+      <a href="truckpic-1.jpg" class="glink">
+        <img src="truckpic-1.jpg" alt="Pioneer Roadways Cat 15">
+      </a>
+
+      <!-- Add more as you like -->
+      <!-- <a href="images/truck3.jpg" class="glink"><img src="images/truck3.jpg" alt="Highway at dusk"></a> -->
+    </div>
+  </div>
+</section>
+
+<!-- Lightweight lightbox modal -->
+<div id="lightbox" class="lb" aria-hidden="true">
+  <button class="lb-close" aria-label="Close">×</button>
+  <img id="lbImg" src="" alt="">
+</div>
+
+<script>
+  // Simple lightbox (no libraries)
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const closeBtn = document.querySelector('.lb-close');
+
+  document.querySelectorAll('.glink').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      lbImg.src = a.getAttribute('href');
+      lb.setAttribute('aria-hidden','false');
+    });
+  });
+
+  function closeLB(){ lb.setAttribute('aria-hidden','true'); lbImg.src = ''; }
+  closeBtn.addEventListener('click', closeLB);
+  lb.addEventListener('click', (e)=>{ if(e.target === lb) closeLB(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLB(); });
+</script>
+
+</body>
+</html>
