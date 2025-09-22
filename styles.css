@@ -377,3 +377,75 @@ a {
   position:absolute; top:12px; right:16px; background:transparent; border:0;
   color:#fff; font-size:2rem; line-height:1; cursor:pointer;
 }
+.banner {
+  background: #222;          /* dark background */
+  color: #fff;               /* white text */
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 6px 0;
+  font-size: 0.9rem;
+}
+
+.banner{
+  position: relative;
+  z-index: 60;
+  background:#222;
+  color:#fff;
+  padding:18px 0;              /* more breathing room */
+  font-size:2rem;              /* much bigger text */
+  font-weight:600;             /* bold */
+  text-align:left;
+  overflow:hidden;
+  white-space:nowrap;
+  border-bottom:2px solid #333;
+}
+
+.banner p{
+  margin:0;
+  display:inline-block;
+  min-width:50%;               /* always at least half screen wide */
+  transform: translateX(100%);
+  animation: scroll-left 20s linear infinite;
+  letter-spacing:1px;
+}
+@keyframes scroll-left{
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.nav { border-bottom: 1px solid var(--stroke); } /* you already have this — good */
+
+.btn { transition: transform .15s ease, box-shadow .15s ease; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+.nav .links a { position: relative; }
+.nav .links a::after{
+  content:""; position:absolute; left:10%; right:10%; bottom:4px; height:2px;
+  background: var(--accent); transform: scaleX(0); transform-origin:left; transition: transform .2s ease;
+}
+.nav .links a:hover::after{ transform: scaleX(1); }
+.banner:hover p { animation-play-state: paused; }
+/* Big banner (you can keep your existing banner styles too) */
+.banner{
+  position:relative; z-index:60; background:#222; color:#fff;
+  padding:18px 0; font-size:2rem; font-weight:600;
+  overflow:hidden; white-space:nowrap; border-bottom:2px solid #333;
+}
+.banner p{
+  margin:0; display:inline-block;
+  transform: translateX(100%);                 /* marquee start */
+  animation: scroll-left 20s linear infinite;  /* marquee motion */
+}
+@keyframes scroll-left{
+  0%{ transform: translateX(100%) }
+  100%{ transform: translateX(-100%) }
+}
+
+/* Entropy letters */
+.char{
+  display:inline-block;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), text-shadow .35s;
+  will-change: transform;
+}
+
+/* Pause marquee while hovering so chaos is readable */
+.banner:hover p{ animation-play-state: paused; }
+
